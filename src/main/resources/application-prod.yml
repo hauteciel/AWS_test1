@@ -1,3 +1,5 @@
 app:
   name: AWSTest-prod
 
+db:
+  password: ${rds.password}

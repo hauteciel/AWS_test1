@@ -15,15 +15,19 @@ public class AwsTest1Application implements CommandLineRunner {
 	@Value("${app.name: default}")
 	String appname;
 
+	@Value("${db.password: ****}")
+	String password;
+
 	public static void main(String[] args) {
 		SpringApplication.run(AwsTest1Application.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("테스트중");
+		System.out.println("run()..");
 
 		System.out.println("appname = " + appname);
+		System.out.println("password = " + password);
 	}
 
 	// 스프링서버가 최초 실행될 때 단 한번 실행되는 배치 메서드이다. dev 모드일때만 작동한다.
